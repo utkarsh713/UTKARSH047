@@ -1,0 +1,159 @@
+.weather-app {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.app-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.header h1 {
+  color: #2c3e50;
+  margin-bottom: 10px;
+}
+
+.header p {
+  color: #7f8c8d;
+  margin-bottom: 5px;
+}
+
+.greeting {
+  font-size: 1.2rem;
+  color: #3498db;
+  margin: 10px 0;
+}
+
+.current-date {
+  color: #7f8c8d;
+  font-size: 0.9rem;
+}
+
+.search-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+.city-input {
+  padding: 12px 20px;
+  width: 300px;
+  border: 2px solid #dfe6e9;
+  border-radius: 25px 0 0 25px;
+  font-size: 16px;
+  outline: none;
+  transition: all 0.3s;
+}
+
+.city-input:focus {
+  border-color: #3498db;
+}
+
+.search-button {
+  padding: 12px 25px;
+  background-color: #3498db;
+  color: white;
+  border: none;
+  border-radius: 0 25px 25px 0;
+  cursor: pointer;
+  font-size: 16px;
+  transition: all 0.3s;
+}
+
+.search-button:hover {
+  background-color: #2980b9;
+}
+
+.weekly-forecast {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.forecast-day {
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  color: #2c3e50;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+}
+
+.forecast-day:hover {
+  transform: translateY(-5px);
+}
+
+.day-name {
+  font-weight: bold;
+  margin-bottom: 15px;
+  font-size: 1.1rem;
+}
+
+.weather-icon {
+  margin: 15px 0;
+}
+
+.temperature {
+  font-size: 2rem;
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+.description {
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+}
+
+.details {
+  font-size: 0.9rem;
+  margin-top: 15px;
+  background-color: rgba(255, 255, 255, 0.3);
+  padding: 10px;
+  border-radius: 8px;
+}
+
+.details div {
+  margin: 5px 0;
+}
+
+.footer {
+  text-align: center;
+  padding: 20px;
+  color: #7f8c8d;
+  font-size: 0.9rem;
+  border-top: 1px solid #ecf0f1;
+}
+
+@media (max-width: 768px) {
+  .search-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .city-input {
+    border-radius: 25px;
+    margin-bottom: 10px;
+    width: 80%;
+  }
+  
+  .search-button {
+    border-radius: 25px;
+    width: 80%;
+  }
+  
+  .weekly-forecast {
+    grid-template-columns: 1fr;
+  }
+}
